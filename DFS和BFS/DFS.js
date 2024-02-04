@@ -6,9 +6,10 @@ function deepFirstSearch(root) {
   const dfs = (root) => {
     res.push(root.val);
 
-    if (!root.children) return
-    for (const node of root.children) {
-      dfs(node)
+    if (root.children) {
+      for (const node of root.children) {
+        dfs(node)
+      }
     }
   }
   dfs(root)
@@ -27,9 +28,10 @@ function deepFirstSearch1(root) {
     const node = stack.pop()
     res.push(node.val)
 
-    if (!node.children) continue
-    for (let i = node.children.length - 1; i >= 0; i--)
-      stack.push(node.children[i])
+    if (node.children) {
+      for (let i = node.children.length - 1; i >= 0; i--)
+        stack.push(node.children[i])
+    }
   }
 
   return res

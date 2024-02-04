@@ -30,3 +30,26 @@ function postOrderTraversal(root) {
 
   return res.reverse();
 }
+// 测试
+const root = {
+  val: 1,
+  left: {
+    val: 2,
+    left: null,
+    right: null,
+  },
+  right: {
+    val: 3,
+    left: {
+      val: 4,
+      left: null,
+      right: null,
+    },
+    right: {
+      val: 5,
+      left: null,
+      right: null,
+    },
+  },
+};
+console.log(postOrderTraversal(root)); // [2, 4, 5, 3, 1]

@@ -6,14 +6,16 @@ function breadthFirstSearch(root) {
   const queue = []
 
   queue.push(root)
-  while (queue.length) {
+  while (queue.length > 0) {
     const node = queue.shift()
     res.push(node.val)
 
-    if (!node.children) continue
-    for (const child of node.children) {
-      queue.push(child)
+    if (node.children) {
+      for (const child of node.children) {
+        queue.push(child)
+      }
     }
+
   }
 
   return res

@@ -6,94 +6,80 @@
  * @param {iterator} proms
  */
 
-Promise._all = (iterObj) => {
-  if (
-    !typeof iterObj === "object" &&
-    iterObj !== null &&
-    typeof iterObj[Symbol[iterator]] !== "function"
-  ) {
-    throw new TypeError(`${iterObj} is not a iterable`);
+Promise._all = iterObj => {
+  if (!typeof iterObj === 'object' && iterObj !== null && typeof iterObj[Symbol[iterator]] !== 'function') {
+    throw new TypeError(`${iterObj} is not a iterable`)
   }
 
   return new Promise((resolve, reject) => {
-    const promises = [...iterObj];
-    if (!promises.length) resolve([]);
+    const promises = [...iterObj]
+    if (!promises.length) resolve([])
 
-    const res = new Array(promises.length);
-    let count = 0;
+    const res = new Array(promises.length)
+    let count = 0
 
     promises.forEach(async (promise, index) => {
       try {
-        const value = await promise;
-        res[index] = value;
-        if (++count === promises.length) resolve(res);
+        const value = await promise
+        res[index] = value
+        if (++count === promises.length) resolve(res)
       } catch (error) {
-        reject(error);
+        reject(error)
       }
-    });
-  });
-};
+    })
+  })
+}
 
 function test() {
   try {
     Promise._all(null).then(
-      (res) => console.log(res),
-      (rej) => console.log(rej),
-    );
+      res => console.log(res),
+      rej => console.log(rej)
+    )
     // throw err: null is not iterable
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
 
   try {
     Promise._all({}).then(
-      (res) => console.log(res),
-      (rej) => console.log(rej),
-    );
+      res => console.log(res),
+      rej => console.log(rej)
+    )
     // throw err: [object object] is not iterable
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
 
   Promise._all([]).then(
-    (res) => console.log(res),
-    (rej) => console.log(rej),
-  );
+    res => console.log(res),
+    rej => console.log(rej)
+  )
   // []
 
   Promise._all(new Set()).then(
-    (res) => console.log(res),
-    (rej) => console.log(rej),
-  );
+    res => console.log(res),
+    rej => console.log(rej)
+  )
   // []
 
   Promise._all(new Map()).then(
-    (res) => console.log(res),
-    (rej) => console.log(rej),
-  );
+    res => console.log(res),
+    rej => console.log(rej)
+  )
   // []
 
-  Promise._all([
-    Promise.resolve(1),
-    Promise.resolve(2),
-    Promise.resolve(3),
-    4,
-  ]).then(
-    (res) => console.log(res),
-    (rej) => console.log(rej),
-  );
+  Promise._all([Promise.resolve(1), Promise.resolve(2), Promise.resolve(3), 4]).then(
+    res => console.log(res),
+    rej => console.log(rej)
+  )
 
   // [1, 2, 3, 4]
 
-  Promise._all([
-    Promise.reject(1),
-    Promise.resolve(2),
-    Promise.resolve(3),
-    4,
-  ]).then(
-    (res) => console.log(res),
-    (rej) => console.log(rej),
-  );
+  Promise._all([Promise.reject(1), Promise.resolve(2), Promise.resolve(3), 4]).then(
+    res => console.log(res),
+    rej => console.log(rej)
+  )
   // 1
 }
-test();
+test()

@@ -2,5 +2,7 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 node "./generate-directory-links.js" >README.md
+git add README.md
+
 pnpm run format
 pnpm run lint

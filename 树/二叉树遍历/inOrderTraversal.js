@@ -58,3 +58,4 @@ const root = {
   },
 };
 console.log(inOrderTraversal(root)); // [2, 1, 4, 3, 5]
+console.log(inOrderTraversal1(root)); // [2, 1, 4, 3, 5]

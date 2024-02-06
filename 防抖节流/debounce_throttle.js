@@ -11,18 +11,17 @@ const debounceThrottle = (fn, delay) => {
       last = now;
       fn(...args);
     } else {
-    // 防抖
+      // 防抖
       clearTimeout(timer);
       timer = setTimeout(() => {
         fn(...args);
       }, delay);
     }
   };
-}
-
+};
 
 // 测试node环境
-const test = debounceThrottle(() => console.log('防抖节流'), 2000);
-let time = setInterval(() => {
+const test = debounceThrottle(() => console.log("防抖节流"), 2000);
+setInterval(() => {
   test();
 }, 1000);

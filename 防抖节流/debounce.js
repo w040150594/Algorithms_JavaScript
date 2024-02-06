@@ -11,7 +11,7 @@ const debounce = (fn, delay) => {
 };
 
 // 测试node环境
-const test = debounce(() => console.log('防抖'), 2000);
+const test = debounce(() => console.log("防抖"), 2000);
 let time = setInterval(() => {
   test();
 }, 1000);

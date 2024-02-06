@@ -14,7 +14,7 @@ function postOrderTraversal(root) {
   return res;
 }
 // 非递归
-function postOrderTraversal(root) {
+function postOrderTraversal1(root) {
   if (!root) return [];
   const res = [];
   const stack = [];
@@ -53,3 +53,4 @@ const root = {
   },
 };
 console.log(postOrderTraversal(root)); // [2, 4, 5, 3, 1]
+console.log(postOrderTraversal1(root)); // [2, 4, 5, 3, 1]

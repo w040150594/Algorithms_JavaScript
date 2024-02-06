@@ -1,44 +1,37 @@
 // 迭代(层序遍历)
 function breadthFirstSearch(root) {
-  if (!root) return []
+  if (!root) return [];
 
-  const res = []
-  const queue = []
+  const res = [];
+  const queue = [];
 
-  queue.push(root)
+  queue.push(root);
   while (queue.length > 0) {
-    const node = queue.shift()
-    res.push(node.val)
+    const node = queue.shift();
+    res.push(node.val);
 
     if (node.children) {
       for (const child of node.children) {
-        queue.push(child)
+        queue.push(child);
       }
     }
-
   }
 
-  return res
+  return res;
 }
 
 // 测试用例
 const tree = {
-  val: 'a',
+  val: "a",
   children: [
     {
-      val: 'b',
-      children: [
-        { val: 'd' },
-        { val: 'e' }
-      ]
+      val: "b",
+      children: [{ val: "d" }, { val: "e" }],
     },
     {
-      val: 'c',
-      children: [
-        { val: 'f' },
-        { val: 'g' }
-      ]
-    }
-  ]
-}
-console.log(breadthFirstSearch(tree)) // [a, b, c, d, e, f, g];
+      val: "c",
+      children: [{ val: "f" }, { val: "g" }],
+    },
+  ],
+};
+console.log(breadthFirstSearch(tree)); // [a, b, c, d, e, f, g];

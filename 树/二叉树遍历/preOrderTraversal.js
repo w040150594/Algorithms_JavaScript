@@ -55,3 +55,4 @@ const root = {
   },
 };
 console.log(preOrderTraversal(root)); // [1, 2, 3, 4, 5]
+console.log(preOrderTraversal1(root)); // [1, 2, 3, 4, 5]

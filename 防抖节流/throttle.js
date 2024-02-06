@@ -28,13 +28,11 @@ const throttle1 = (fn, interval) => {
 };
 
 // 测试node环境
-const test = throttle(() => console.log('时间戳版本'), 2000);
-const test1 = throttle1(() => console.log('定时器版本'), 2000);
+const test = throttle(() => console.log("时间戳版本"), 2000);
+const test1 = throttle1(() => console.log("定时器版本"), 2000);
 setInterval(() => {
   test();
 }, 100);
 setInterval(() => {
   test1();
 }, 100);
-
-

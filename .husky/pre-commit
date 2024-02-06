@@ -5,3 +5,4 @@ node "./generate-directory-links.js" >README.md
 
 pnpm run format
 pnpm run lint
+git add .

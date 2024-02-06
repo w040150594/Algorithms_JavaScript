@@ -11,11 +11,11 @@
 - [实现Promise.all.js](JavaScript-HOT/实现Promise.all.js)
 - [树形结构转成列表.js](JavaScript-HOT/树形结构转成列表.js)
 
-## Promises实现
-
 ## 前端常见设计模式
 
+- [单例模式.js](前端常见设计模式/单例模式.js)
 - [发布订阅者模式.js](前端常见设计模式/发布订阅者模式.js)
+- [策略模式.js](前端常见设计模式/策略模式.js)
 
 ## 树
 

@@ -8,31 +8,31 @@
 // 注意: 字符串只包含从 a-z 的小写字母。字符串的最大长度是50000。
 
 const validPalindrome = s => {
-  const len = s.length
+  const len = s.length;
   let left = 0,
-    right = len - 1
+    right = len - 1;
   // 遍历直到左右不相等
   while (left < right && s[left] === s[right]) {
-    left++
-    right--
+    left++;
+    right--;
   }
 
   const isPalindrome = (left, right) => {
     while (left < right) {
-      if (s[left] !== s[right]) return false
-      left++
-      right--
+      if (s[left] !== s[right]) return false;
+      left++;
+      right--;
     }
-    return true
-  }
+    return true;
+  };
 
   // 判断删除左边或者右边之后的字符串是否是回文
-  if (isPalindrome(left + 1, right)) return true
-  if (isPalindrome(left, right - 1)) return true
+  if (isPalindrome(left + 1, right)) return true;
+  if (isPalindrome(left, right - 1)) return true;
 
-  return false
-}
+  return false;
+};
 // 时间复杂度：O(n) 空间复杂度：O(1)
 // 测试
-console.log(validPalindrome('aba')) // true
-console.log(validPalindrome('abca')) // true
+console.log(validPalindrome('aba')); // true
+console.log(validPalindrome('abca')); // true

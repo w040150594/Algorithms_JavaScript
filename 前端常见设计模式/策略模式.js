@@ -2,7 +2,7 @@
 const strategies = {
   add: num => num + num,
   multiply: num => num * num
-}
-const calculateBonus = (type, num) => strategies[type](num)
-console.log(calculateBonus('add', 3))
-console.log(calculateBonus('multiply', 3))
+};
+const calculateBonus = (type, num) => strategies[type](num);
+console.log(calculateBonus('add', 3));
+console.log(calculateBonus('multiply', 3));

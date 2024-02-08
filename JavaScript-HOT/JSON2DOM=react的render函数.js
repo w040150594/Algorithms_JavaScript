@@ -16,7 +16,7 @@ const test = {
       ]
     }
   ]
-}
+};
 // 把上述虚拟Dom转化成下方真实Dom
 // <div id="app">
 //   <span>
@@ -29,21 +29,21 @@ const test = {
 // </div>
 
 function _render(vnode) {
-  if (typeof vnode === 'number') vnode = String(vnode)
-  if (typeof vnode === 'string') return document.createTextNode(vnode)
+  if (typeof vnode === 'number') vnode = String(vnode);
+  if (typeof vnode === 'string') return document.createTextNode(vnode);
 
-  const dom = document.createElement(vnode.tag)
+  const dom = document.createElement(vnode.tag);
   if (vnode.attrs) {
     Object.keys(vnode.attrs).foreach(key => {
-      dom.setAttribute(key, vnode.attrs[key])
-    })
+      dom.setAttribute(key, vnode.attrs[key]);
+    });
   }
 
   if (vnode.children) {
     vnode.children.foreach(child => {
-      dom.appendChild(_render(child))
-    })
+      dom.appendChild(_render(child));
+    });
   }
 
-  return dom
+  return dom;
 }

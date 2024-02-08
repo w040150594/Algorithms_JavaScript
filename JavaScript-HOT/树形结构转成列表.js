@@ -11,20 +11,20 @@ const data = [
       }
     ]
   }
-]
+];
 
 function flattenTree(data, result = []) {
-  if (!data) return []
+  if (!data) return [];
 
   for (const node of data) {
-    const { children, ...rest } = node
-    result.push(rest)
+    const { children, ...rest } = node;
+    result.push(rest);
 
-    if (children && children.length) flattenTree(children, result)
+    if (children && children.length) flattenTree(children, result);
   }
 
-  return result
+  return result;
 }
 
-const flatData = flattenTree(data)
-console.log(flatData)
+const flatData = flattenTree(data);
+console.log(flatData);

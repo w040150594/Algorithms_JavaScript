@@ -4,44 +4,44 @@
 
 // 求和变成求差,固定一个,移动另外两个
 const threeSum = nums => {
-  const res = []
-  nums = nums.sort((a, b) => a - b)
-  const len = nums.length
+  const res = [];
+  nums = nums.sort((a, b) => a - b);
+  const len = nums.length;
 
   // 倒数第三个位置为止
   for (let i = 0; i < len - 2; i++) {
-    let left = i + 1
-    let right = len - 1
-    if (i > 0 && nums[i] === nums[i - 1]) continue
+    let left = i + 1;
+    let right = len - 1;
+    if (i > 0 && nums[i] === nums[i - 1]) continue;
 
     while (left < right) {
       if (nums[i] + nums[left] + nums[right] < 0) {
-        left++
+        left++;
         while (left < right && nums[left] === nums[left - 1]) {
-          left++
+          left++;
         }
       } else if (nums[i] + nums[left] + nums[right] > 0) {
-        right--
+        right--;
         while (left < right && nums[right] === nums[right + 1]) {
-          right--
+          right--;
         }
       } else {
-        res.push([nums[i], nums[left], nums[right]])
-        right--
-        left++
+        res.push([nums[i], nums[left], nums[right]]);
+        right--;
+        left++;
         // 防止结果重复
         while (left < right && nums[left] === nums[left - 1]) {
-          left++
+          left++;
         }
         while (left < right && nums[right] === nums[right + 1]) {
-          right--
+          right--;
         }
       }
     }
   }
 
-  return res
-}
+  return res;
+};
 // 时间复杂度：O(n^2) 空间复杂度：O(1)
 // 测试
-console.log(threeSum([-1, 0, 1, 2, -1, -4])) // [ [-1, 0, 1], [-1, -1, 2] ]
+console.log(threeSum([-1, 0, 1, 2, -1, -4])); // [ [-1, 0, 1], [-1, -1, 2] ]

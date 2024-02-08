@@ -6,7 +6,7 @@ module.exports = {
   // 缩进
   tabWidth: 2,
   // 结尾不用分号
-  semi: false,
+  semi: true,
   // 使用单引号
   singleQuote: true,
   // 箭头函数里面，如果是一个参数的时候，去掉括号
@@ -15,4 +15,4 @@ module.exports = {
   bracketSpacing: true,
   // 尾随逗号
   trailingComma: 'none'
-}
+};

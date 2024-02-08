@@ -8,14 +8,14 @@
 
 // 解题思路：遍历链表，如果当前节点的值和下一个节点的值相等，则删除下一个节点，否则继续遍历。
 const deleteDuplicates = head => {
-  let cur = head
+  let cur = head;
 
   while (cur !== null && cur.next !== null) {
-    if (cur.val === cur.next.val) cur.next = cur.next.next
-    else cur = cur.next
+    if (cur.val === cur.next.val) cur.next = cur.next.next;
+    else cur = cur.next;
   }
-  return head
-}
+  return head;
+};
 
 const head = {
   val: 1,
@@ -26,6 +26,6 @@ const head = {
       next: null
     }
   }
-}
+};
 
-console.log(deleteDuplicates(head)) // 1 -> 2
+console.log(deleteDuplicates(head)); // 1 -> 2

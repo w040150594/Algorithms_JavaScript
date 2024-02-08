@@ -8,32 +8,32 @@
 
 // 创建dummy结点就是咱们人为制造出来的第一个结点的前驱结点
 function ListNode(val) {
-  this.val = val
-  this.next = null
+  this.val = val;
+  this.next = null;
 }
 
 const deleteDuplicates = head => {
-  if (!head || !head.next) return head
-  let dummy = new ListNode()
-  dummy.next = head
+  if (!head || !head.next) return head;
+  let dummy = new ListNode();
+  dummy.next = head;
 
-  let cur = dummy
+  let cur = dummy;
   // cur后面至少有两个节点
   while (cur.next && cur.next.next) {
     if (cur.next.val === cur.next.next.val) {
       // 保存相同值
-      const val = cur.next.val
+      const val = cur.next.val;
       // 遍历检查之后还有没有相同的值,有则删除
       while (cur.next && cur.next.val === val) {
-        cur.next = cur.next.next
+        cur.next = cur.next.next;
       }
     } else {
-      cur = cur.next
+      cur = cur.next;
     }
   }
 
-  return dummy.next
-}
+  return dummy.next;
+};
 // 时间复杂度 O(n), 空间复杂度 O(1)
 // 测试
 const head = {
@@ -57,5 +57,5 @@ const head = {
       }
     }
   }
-}
-console.log(deleteDuplicates(head)) // 1 -> 2 -> 5
+};
+console.log(deleteDuplicates(head)); // 1 -> 2 -> 5

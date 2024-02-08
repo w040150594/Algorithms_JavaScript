@@ -21,4 +21,4 @@ module.exports = {
     'no-unused-vars': 'off', // 禁止出现未使用过的变量
     'no-const-assign': 'error' // 禁止修改 const 声明的变量
   }
-}
+};

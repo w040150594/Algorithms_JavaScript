@@ -1,28 +1,28 @@
 function SingleDog() {
-  this.name = 'SingleDog'
+  this.name = 'SingleDog';
 }
 SingleDog.getInstance = (function () {
-  let instance = null
+  let instance = null;
 
   return function () {
     if (!instance) {
-      instance = new SingleDog()
+      instance = new SingleDog();
     }
-    return instance
-  }
-})()
-const t1 = SingleDog.getInstance()
-const t2 = SingleDog.getInstance()
-console.log(t1 === t2) // true;
+    return instance;
+  };
+})();
+const t1 = SingleDog.getInstance();
+const t2 = SingleDog.getInstance();
+console.log(t1 === t2); // true;
 
 class SingleDog1 {
   static getInstance() {
     if (!SingleDog.instance) {
-      SingleDog.instance = new SingleDog1()
+      SingleDog.instance = new SingleDog1();
     }
-    return SingleDog.instance
+    return SingleDog.instance;
   }
 }
-const s1 = SingleDog1.getInstance()
-const s2 = SingleDog1.getInstance()
-console.log(s1 === s2) // true;
+const s1 = SingleDog1.getInstance();
+const s2 = SingleDog1.getInstance();
+console.log(s1 === s2); // true;

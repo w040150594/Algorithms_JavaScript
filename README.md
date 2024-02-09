@@ -24,6 +24,14 @@
 - [策略模式.js](前端常见设计模式/策略模式.js)
 - [观察者模式.js](前端常见设计模式/观察者模式.js)
 
+## 实现Promise
+
+- [Promise.all.js](实现Promise/Promise.all.js)
+- [Promise.allSettled.js](实现Promise/Promise.allSettled.js)
+- [Promise.any.js](实现Promise/Promise.any.js)
+- [Promise.race.js](实现Promise/Promise.race.js)
+- [PromiseA+规范.js](实现Promise/PromiseA+规范.js)
+
 ## 排序算法
 
 - [堆排序.js](排序算法/堆排序.js)

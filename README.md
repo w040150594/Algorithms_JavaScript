@@ -29,7 +29,11 @@
 - [Promise.all.js](实现Promise/Promise.all.js)
 - [Promise.allSettled.js](实现Promise/Promise.allSettled.js)
 - [Promise.any.js](实现Promise/Promise.any.js)
+- [Promise.prototype.catch.js](实现Promise/Promise.prototype.catch.js)
+- [Promise.prototype.finally.js](实现Promise/Promise.prototype.finally.js)
 - [Promise.race.js](实现Promise/Promise.race.js)
+- [Promise.reject.js](实现Promise/Promise.reject.js)
+- [Promise.resolve.js](实现Promise/Promise.resolve.js)
 - [PromiseA+规范.js](实现Promise/PromiseA+规范.js)
 
 ## 排序算法

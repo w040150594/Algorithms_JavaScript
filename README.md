@@ -8,6 +8,9 @@
 ## JavaScript-HOT
 
 - [JSON2DOM=react的render函数.js](JavaScript-HOT/JSON2DOM=react的render函数.js)
+- [call-apply-bind.js](JavaScript-HOT/call-apply-bind.js)
+- [flat.js](JavaScript-HOT/flat.js)
+- [instanceof.js](JavaScript-HOT/instanceof.js)
 - [实现Promise.all.js](JavaScript-HOT/实现Promise.all.js)
 - [树形结构转成列表.js](JavaScript-HOT/树形结构转成列表.js)
 

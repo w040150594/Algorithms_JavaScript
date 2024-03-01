@@ -18,13 +18,11 @@
 // 对每一个子树的左右节点调换->递归
 
 const invertTree = function (root) {
-  if (!root) return root;
-  // 递归交换右孩子的子结点
-  let left = invertTree(root.left);
-  // 递归交换左孩子的子结点
-  let right = invertTree(root.right);
-  // 交换当前遍历到的节点
-  root.left = right;
-  root.right = left;
+  if (root === null) return null;
+
+  const temp = root.left;
+  root.left = invertTree(root.right);
+  root.right = invertTree(temp);
+
   return root;
 };

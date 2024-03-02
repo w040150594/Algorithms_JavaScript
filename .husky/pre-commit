@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+PATH="/opt/homebrew/opt/tomcat@9/bin:/Users/H/.nvm/versions/node/v20.11.0/bin:/opt/homebrew/opt/node@16/bin:/Users/H/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/H/.orbstack/bin"
+export PATH
+
 node "./generate-directory-links.js" >README.md
 
 pnpm run format

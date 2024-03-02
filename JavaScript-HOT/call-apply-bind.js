@@ -1,4 +1,5 @@
 Function.prototype.call = function (context, ...args) {
+  if (typeof this !== 'function') throw new TypeError('Error');
   context ??= {};
 
   context.fn = this;
@@ -7,6 +8,7 @@ Function.prototype.call = function (context, ...args) {
   return res;
 };
 Function.prototype.apply = function (context, args) {
+  if (typeof this !== 'function') throw new TypeError('Error');
   context ??= {};
 
   context.fn = this;
@@ -15,7 +17,8 @@ Function.prototype.apply = function (context, args) {
   return res;
 };
 
-Function.prototype.apply = function (context, args) {
+Function.prototype.bind = function (context, args) {
+  if (typeof this !== 'function') throw new TypeError('Error');
   context ??= {};
 
   return function (...args2) {

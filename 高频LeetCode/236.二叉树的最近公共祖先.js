@@ -17,16 +17,24 @@
 // 输入：root = [1,2], p = 1, q = 2
 // 输出：1
 
+// 函数表示：lowestCommonAncestor(root, p, q) root是一个二叉树的根节点，p和q是两个节点，返回p和q的最近公共祖先节点。
+//如果一个节点能够在它的左右子树中分别找到 p 和 q，则该节点为 LCA 节点。
 const lowestCommonAncestor = function (root, p, q) {
-  // 递归结束
-  if (root == null || root == p || root == q) return root;
+  // 如果root为空,找不到最近公共祖先
+  if (root === null) return null;
+  // 查找前如果找到p或者q,本身其本身就是最近公共祖先
+  if (root === p || root === q) return root;
 
+  // 在左右子树中分别查找p和q
   const left = lowestCommonAncestor(root.left, p, q);
   const right = lowestCommonAncestor(root.right, p, q);
-  // 左边没找到,全在右边
-  if (left == null) return right;
-  if (right == null) return left;
 
+  // 左边没找到,说明公共祖先在右边
+  if (left === null) return right;
+  // 右边没找到,说明公共祖先在左边
+  if (right === null) return left;
+  // 如果一个节点能够在它的左右子树中分别找到 p 和 q，则该节点为 LCA 节点
+  // 或者说如果发现 left 和 right 都非空，就说明当前节点是 LCA 节点
   return root;
 };
 

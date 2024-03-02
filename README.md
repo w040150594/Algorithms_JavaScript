@@ -8,11 +8,18 @@
 ## JavaScript-HOT
 
 - [JSON2DOM=react的render函数.js](JavaScript-HOT/JSON2DOM=react的render函数.js)
+- [Lru.js](JavaScript-HOT/Lru.js)
+- [URL反转.js](JavaScript-HOT/URL反转.js)
 - [call-apply-bind.js](JavaScript-HOT/call-apply-bind.js)
 - [flat.js](JavaScript-HOT/flat.js)
 - [instanceof.js](JavaScript-HOT/instanceof.js)
+- [new.js](JavaScript-HOT/new.js)
 - [实现Promise.all.js](JavaScript-HOT/实现Promise.all.js)
+- [实现一个LazyMan.js](JavaScript-HOT/实现一个LazyMan.js)
+- [寄生组合继承.js](JavaScript-HOT/寄生组合继承.js)
+- [标签分类.js](JavaScript-HOT/标签分类.js)
 - [树形结构转成列表.js](JavaScript-HOT/树形结构转成列表.js)
+- [解析URLParams为对象.js](JavaScript-HOT/解析URLParams为对象.js)
 
 ## css
 

@@ -5,7 +5,7 @@ Array.prototype.flat = function (deep = 1) {
   deep--;
   for (const item of this) {
     if (Array.isArray(item) && deep > 0) {
-      res = res.concat(item(deep));
+      res = res.concat(item.flat(deep));
     } else {
       res.push(item);
     }
@@ -21,4 +21,4 @@ Array.prototype.flat = function (deep = 1) {
   // 原生方法
   // return this.flat(deep);
 };
-console.log(arr.flat(1));
+console.log(arr.flat(2));

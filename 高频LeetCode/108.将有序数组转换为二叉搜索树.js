@@ -17,21 +17,19 @@ function TreeNode(val) {
   this.left = this.right = null;
 }
 
-const sortedArrayToBST = nums => {
-  if (!nums.length) return null;
+const sortedArrayToBST = function (nums) {
+  //函数定义将有序数组 nums 从索引 start 到 end 转换为二叉搜索树
+  const buildBST = (nums, start, end) => {
+    if (start > end) return null;
 
-  const buildBST = (low, high) => {
-    if (low > high) return null;
+    let mid = Math.floor((start + end) / 2);
+    let root = new TreeNode(nums[mid]);
+    root.left = buildBST(nums, start, mid - 1);
+    root.right = buildBST(nums, mid + 1, end);
 
-    const mid = Math.floor(low + (high - low) / 2);
-    const cur = new TreeNode(nums[mid]);
-    cur.left = buildBST(low, mid - 1);
-    cur.right = buildBST(mid + 1, high);
-
-    return cur;
+    return root;
   };
-
-  return (root = buildBST(0, nums.length - 1));
+  return buildBST(nums, 0, nums.length - 1);
 };
 
 // 测试

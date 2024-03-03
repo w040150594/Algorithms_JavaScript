@@ -20,6 +20,7 @@
 - [标签分类.js](JavaScript-HOT/标签分类.js)
 - [树形结构转成列表.js](JavaScript-HOT/树形结构转成列表.js)
 - [解析URLParams为对象.js](JavaScript-HOT/解析URLParams为对象.js)
+- [进制转换.js](JavaScript-HOT/进制转换.js)
 
 ## css
 
@@ -104,15 +105,20 @@
 - [21.合并两个有序链表.js](高频LeetCode/21.合并两个有序链表.js)
 - [211.添加与搜索单词-数据结构设计.js](高频LeetCode/211.添加与搜索单词-数据结构设计.js)
 - [215.数组中的第K个最大元素.js](高频LeetCode/215.数组中的第K个最大元素.js)
+- [225.用队列实现栈.js](高频LeetCode/225.用队列实现栈.js)
 - [226.翻转二叉树.js](高频LeetCode/226.翻转二叉树.js)
+- [232.用栈实现队列.js](高频LeetCode/232.用栈实现队列.js)
 - [236.二叉树的最近公共祖先.js](高频LeetCode/236.二叉树的最近公共祖先.js)
 - [239.滑动窗口最大值.js](高频LeetCode/239.滑动窗口最大值.js)
 - [25.K个一组翻转链表.js](高频LeetCode/25.K个一组翻转链表.js)
 - [257.二叉树的所有路径.js](高频LeetCode/257.二叉树的所有路径.js)
+- [283.移动零.js](高频LeetCode/283.移动零.js)
 - [3.无重复字符的最长子串.js](高频LeetCode/3.无重复字符的最长子串.js)
+- [300.最长递增子序列.js](高频LeetCode/300.最长递增子序列.js)
 - [331.验证二叉树前序序列化.js](高频LeetCode/331.验证二叉树前序序列化.js)
 - [42.接雨水.js](高频LeetCode/42.接雨水.js)
 - [429.N 叉树的层序遍历.js](高频LeetCode/429.N 叉树的层序遍历.js)
+- [450.删除二叉搜索树中的节点.js](高频LeetCode/450.删除二叉搜索树中的节点.js)
 - [46.全排列.js](高频LeetCode/46.全排列.js)
 - [5.最长回文子串.js](高频LeetCode/5.最长回文子串.js)
 - [509.斐波那契数.js](高频LeetCode/509.斐波那契数.js)

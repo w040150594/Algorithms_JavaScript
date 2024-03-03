@@ -28,22 +28,30 @@
 
 // 中序遍历有序性质
 const isValidBST = function (root) {
-  let stack = [];
-  let inorder = -Infinity;
+  // let stack = [];
+  // let inorder = -Infinity;
 
-  while (stack.length > 0 || root !== null) {
-    while (root !== null) {
-      stack.push(root);
-      root = root.left;
-    }
-    root = stack.pop();
-    // 如果中序遍历得到的节点的值小于等于前一个 inorder，说明不是二叉搜索树
-    if (root.val <= inorder) return false;
-    inorder = root.val;
+  // while (stack.length > 0 || root !== null) {
+  //   while (root !== null) {
+  //     stack.push(root);
+  //     root = root.left;
+  //   }
+  //   root = stack.pop();
+  //   // 如果中序遍历得到的节点的值小于等于前一个 inorder，说明不是二叉搜索树
+  //   if (root.val <= inorder) return false;
+  //   inorder = root.val;
 
-    root = root.right;
-  }
-  return true;
+  //   root = root.right;
+  // }
+  // return true;
+
+  if (root === null) return true;
+  // root 的左边应该更小
+  if (root.left !== null && root.left.val >= root.val) return false;
+  // root 的右边应该更大
+  if (root.right !== null && root.right.val <= root.val) return false;
+
+  return isValidBST(root.left) && isValidBST(root.right);
 };
 
 const test = {

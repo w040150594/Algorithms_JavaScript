@@ -13,6 +13,7 @@
 - [列表转成树形结构.js](JavaScript-HOT/列表转成树形结构.js)
 - [实现一个LazyMan.js](JavaScript-HOT/实现一个LazyMan.js)
 - [寄生组合继承.js](JavaScript-HOT/寄生组合继承.js)
+- [开平方根.js](JavaScript-HOT/开平方根.js)
 - [数组最大深度.js](JavaScript-HOT/数组最大深度.js)
 - [标签分类.js](JavaScript-HOT/标签分类.js)
 - [树形结构转成列表.js](JavaScript-HOT/树形结构转成列表.js)

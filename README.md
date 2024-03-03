@@ -10,17 +10,14 @@
 - [JSON2DOM=react的render函数.js](JavaScript-HOT/JSON2DOM=react的render函数.js)
 - [Lru.js](JavaScript-HOT/Lru.js)
 - [URL反转.js](JavaScript-HOT/URL反转.js)
-- [call-apply-bind.js](JavaScript-HOT/call-apply-bind.js)
-- [flat.js](JavaScript-HOT/flat.js)
-- [instanceof.js](JavaScript-HOT/instanceof.js)
-- [new.js](JavaScript-HOT/new.js)
-- [实现Promise.all.js](JavaScript-HOT/实现Promise.all.js)
 - [实现一个LazyMan.js](JavaScript-HOT/实现一个LazyMan.js)
 - [寄生组合继承.js](JavaScript-HOT/寄生组合继承.js)
+- [数组最大深度.js](JavaScript-HOT/数组最大深度.js)
 - [标签分类.js](JavaScript-HOT/标签分类.js)
 - [树形结构转成列表.js](JavaScript-HOT/树形结构转成列表.js)
 - [解析URLParams为对象.js](JavaScript-HOT/解析URLParams为对象.js)
 - [进制转换.js](JavaScript-HOT/进制转换.js)
+- [驼峰转下划线.js](JavaScript-HOT/驼峰转下划线.js)
 
 ## css
 
@@ -43,6 +40,16 @@
 - [发布订阅者模式.js](前端常见设计模式/发布订阅者模式.js)
 - [策略模式.js](前端常见设计模式/策略模式.js)
 - [观察者模式.js](前端常见设计模式/观察者模式.js)
+
+## 实现JS原生方法
+
+- [JSON.stringify.js](实现JS原生方法/JSON.stringify.js)
+- [Object.is.js](实现JS原生方法/Object.is.js)
+- [call-apply-bind.js](实现JS原生方法/call-apply-bind.js)
+- [flat.js](实现JS原生方法/flat.js)
+- [instanceof.js](实现JS原生方法/instanceof.js)
+- [interator.js](实现JS原生方法/interator.js)
+- [new.js](实现JS原生方法/new.js)
 
 ## 实现Promise
 

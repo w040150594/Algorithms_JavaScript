@@ -198,7 +198,7 @@ function filterTree(tree, func) {
 }
 
 // 遍历转换将树节中没有 pid 的节点中添加 pid
-const addPid = tree => {
+function addPid(tree) {
   const traverse = (node, pid) => {
     if (!node) return;
 
@@ -214,7 +214,7 @@ const addPid = tree => {
   });
 
   return tree;
-};
+}
 
 const tree1 = getTree(list);
 console.log(tree1);
@@ -224,3 +224,4 @@ console.log(getTreePath(tree1, 6));
 console.log(strToObject(strarr));
 console.log(filterTree(tree1, node => node.id === 3));
 console.log(addPid(tree1));
+console.log(treeToFiber(tree1));

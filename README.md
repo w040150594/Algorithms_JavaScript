@@ -11,6 +11,7 @@
 - [Lru.js](JavaScript-HOT/Lru.js)
 - [URL反转.js](JavaScript-HOT/URL反转.js)
 - [列表转成树形结构.js](JavaScript-HOT/列表转成树形结构.js)
+- [多子节点的树形结构转为左儿子右兄弟的链表.js](JavaScript-HOT/多子节点的树形结构转为左儿子右兄弟的链表.js)
 - [实现一个LazyMan.js](JavaScript-HOT/实现一个LazyMan.js)
 - [寄生组合继承.js](JavaScript-HOT/寄生组合继承.js)
 - [开平方根.js](JavaScript-HOT/开平方根.js)

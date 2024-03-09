@@ -21,17 +21,29 @@ const arr = [
 ];
 
 function changeArr(arr) {
-  let map = new Map();
-  for (const item of arr) {
-    for (const categorie of item.categories) {
-      if (map.has(categorie)) {
-        map.get(categorie).push(item.name);
+  // let map = new Map();
+  // for (const item of arr) {
+  //   for (const categorie of item.categories) {
+  //     if (map.has(categorie)) {
+  //       map.get(categorie).push(item.name);
+  //     } else {
+  //       map.set(categorie, [item.name]);
+  //     }
+  //   }
+  // }
+  // return Array.from(map).map(([name, categories]) => ({ name, categories }));
+
+  return arr.reduce((acc, cur) => {
+    for (const categorie of cur.categories) {
+      const index = acc.findIndex(item => item.name === categorie);
+      if (index > -1) {
+        acc[index].categories.push(cur.name);
       } else {
-        map.set(categorie, [item.name]);
+        acc.push({ name: categorie, categories: [cur.name] });
       }
     }
-  }
 
-  return Array.from(map).map(([name, categories]) => ({ name, categories }));
+    return acc;
+  }, []);
 }
 console.log(changeArr(arr));

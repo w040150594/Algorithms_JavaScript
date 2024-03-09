@@ -20,12 +20,19 @@ const moveZeroes = function (nums) {
   let right = 0;
 
   while (right < len) {
-    if (nums[right] !== 0) {
+    // if (nums[right] !== 0) {
+    //   [nums[left], nums[right]] = [nums[right], nums[left]];
+    //   left++;
+    // }
+
+    // right++;
+    if (nums[right] === 0) {
+      right++;
+    } else {
       [nums[left], nums[right]] = [nums[right], nums[left]];
       left++;
+      right++;
     }
-
-    right++;
   }
 
   return nums;

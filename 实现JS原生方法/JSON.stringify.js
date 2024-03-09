@@ -1,14 +1,12 @@
 function toJSON(obj) {
   if (obj === null) return 'null';
   if (['number', 'boolean', 'string'].includes(typeof obj)) return String(obj);
-
   if (Array.isArray(obj)) return `[${obj.map(item => toJSON(item)).join(',')}]`;
   if (typeof obj === 'object') {
     return `${Object.keys(obj)
       .map(key => `"${key}":${toJSON(obj[key])}`)
       .join(',')}`;
   }
-
   return undefined;
 }
 

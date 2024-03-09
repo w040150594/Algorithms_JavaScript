@@ -61,15 +61,12 @@ function getTree(list) {
   const tree = [];
   // 用hashmap存储id=>{node, children:[]}的映射
   const hashmap = {};
-
   for (const item of list) {
     const { id, pid } = item;
-
     // 处理当前节点
     // 如果没创建就创建,如果之前已经创建过则直接赋值
     if (!hashmap[id]) hashmap[id] = { ...item, children: [] };
     else hashmap[id] = { ...item, children: hashmap[id].children };
-
     // 处理父节点
     if (pid === 0) {
       // 根节点直接放入list
@@ -85,7 +82,6 @@ function getTree(list) {
       hashmap[pid].children.push(hashmap[id]);
     }
   }
-
   return tree;
 }
 
@@ -174,8 +170,6 @@ function strToObject(str) {
       temp = temp[item];
     });
   }
-
-  return obj;
 }
 
 // 树筛选,(分解子问题)一个节点是否保留在过滤后的树结构中，取决于它自身以及后代节点中是否有符合条件的节点
@@ -196,7 +190,6 @@ function filterTree(tree, func) {
       if (node.children && node.children.length) return true;
     });
 }
-
 // 遍历转换将树节中没有 pid 的节点中添加 pid
 function addPid(tree) {
   const traverse = (node, pid) => {

@@ -6,10 +6,10 @@ Object.is = function (x, y) {
     return 1 / x === 1 / y;
   }
   // 处理 NaN
-  if (x !== x && y !== y) {
-    return true;
-  }
-
+  // if (x !== x && y !== y) {
+  //   return true;
+  // }
+  if (isNaN(x) && isNaN(y)) return true;
   return x === y;
 };
 

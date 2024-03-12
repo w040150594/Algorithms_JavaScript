@@ -5,20 +5,27 @@
 - [BFS.js](DFS和BFS/BFS.js)
 - [DFS.js](DFS和BFS/DFS.js)
 
+## Hooks
+
 ## JavaScript-HOT
 
 - [JSON2DOM=react的render函数.js](JavaScript-HOT/JSON2DOM=react的render函数.js)
 - [Lru.js](JavaScript-HOT/Lru.js)
 - [URL反转.js](JavaScript-HOT/URL反转.js)
+- [bigint相加.js](JavaScript-HOT/bigint相加.js)
 - [lodash.get.js](JavaScript-HOT/lodash.get.js)
 - [列表转成树形结构.js](JavaScript-HOT/列表转成树形结构.js)
+- [千分位格式化.js](JavaScript-HOT/千分位格式化.js)
+- [图片懒加载.js](JavaScript-HOT/图片懒加载.js)
 - [多子节点的树形结构转为左儿子右兄弟的链表.js](JavaScript-HOT/多子节点的树形结构转为左儿子右兄弟的链表.js)
 - [实现一个LazyMan.js](JavaScript-HOT/实现一个LazyMan.js)
 - [寄生组合继承.js](JavaScript-HOT/寄生组合继承.js)
 - [开平方根.js](JavaScript-HOT/开平方根.js)
+- [数组交集.js](JavaScript-HOT/数组交集.js)
 - [数组最大深度.js](JavaScript-HOT/数组最大深度.js)
 - [标签分类.js](JavaScript-HOT/标签分类.js)
 - [树形结构转成列表.js](JavaScript-HOT/树形结构转成列表.js)
+- [渲染大数据.js](JavaScript-HOT/渲染大数据.js)
 - [解析URLParams为对象.js](JavaScript-HOT/解析URLParams为对象.js)
 - [进制转换.js](JavaScript-HOT/进制转换.js)
 - [驼峰转下划线.js](JavaScript-HOT/驼峰转下划线.js)
@@ -69,7 +76,14 @@
 
 ## 异步相关 js 手写
 
+- [Jsonp.js](异步相关 js 手写/Jsonp.js)
+- [repeat.js](异步相关 js 手写/repeat.js)
+- [交通灯.js](异步相关 js 手写/交通灯.js)
+- [实现一个sleep函数.js](异步相关 js 手写/实现一个sleep函数.js)
 - [实现一个串行请求队列.js](异步相关 js 手写/实现一个串行请求队列.js)
+- [实现有并行限制的Promise调度器.js](异步相关 js 手写/实现有并行限制的Promise调度器.js)
+- [每隔一秒打印12345.js](异步相关 js 手写/每隔一秒打印12345.js)
+- [限定次数内重试.js](异步相关 js 手写/限定次数内重试.js)
 
 ## 排序算法
 

@@ -23,7 +23,7 @@ const maxSubArray = function (nums) {
   dp[0] = nums[0];
   let max = dp[0];
 
-  for (let i = i; i < len; i++) {
+  for (let i = 0; i < len; i++) {
     dp[i] = dp[i - 1] > 0 ? dp[i - 1] + nums[i] : nums[i];
     max = Math.max(max, dp[i]);
   }

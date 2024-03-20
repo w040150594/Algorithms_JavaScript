@@ -21,4 +21,4 @@ Array.prototype.flat = function (deep = 1) {
   // 原生方法
   // return this.flat(deep);
 };
-console.log(arr.flat(2));
+console.log(arr.flat(3));

@@ -49,6 +49,34 @@ const tree = [
   }
 ];
 
+const levelTree = [
+  {
+    level: 1,
+    name: '部门1',
+    id: 1
+  },
+  {
+    level: 3,
+    name: '部门2',
+    id: 2
+  },
+  {
+    level: 2,
+    name: '部门3',
+    id: 3
+  },
+  {
+    level: 3,
+    name: '部门4',
+    id: 4
+  },
+  {
+    level: 4,
+    name: '部门5',
+    id: 5
+  }
+];
+
 const strarr = {
   'a-b-c-d': 1,
   'a-b-c-e': 2,
@@ -209,6 +237,29 @@ function addPid(tree) {
   return tree;
 }
 
+// 打印树层次结构缩进表示(第一层节点加*号,第二层节点加-号,第三层节点加+号)
+function treePrint(tree) {
+  let res = '';
+
+  const dfs = (node, level) => {
+    if (!node) return;
+
+    if (level % 3 === 0) res += `${'  '.repeat(level)}* ${node.name}\n`;
+    else if (level % 3 === 1) res += `${'  '.repeat(level)}- ${node.name}\n`;
+    else res += `${'  '.repeat(level)}+ ${node.name}\n`;
+
+    node.children?.forEach(child => {
+      dfs(child, level + 1);
+    });
+  };
+
+  tree.forEach(node => {
+    dfs(node, 0);
+  });
+
+  return res;
+}
+
 const tree1 = getTree(list);
 console.log(tree1);
 console.log(getList(tree1));
@@ -217,4 +268,4 @@ console.log(getTreePath(tree1, 6));
 console.log(strToObject(strarr));
 console.log(filterTree(tree1, node => node.id === 3));
 console.log(addPid(tree1));
-console.log(treeToFiber(tree1));
+console.log(treePrint(tree1));
